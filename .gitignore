@@ -1,0 +1,9 @@
+main.fdb_latexmk
+main.fls
+main.log
+main.out
+main.synctex.gz
+main.aux
+sections/indent.log
+indent.log
+*.log

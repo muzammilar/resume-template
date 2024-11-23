@@ -1,0 +1,88 @@
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeItem}[2]{
+  \item{
+    \textbf{#1}{: #2 \vspace{-5pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{ #4} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingThreeColumns}[6]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 & #3 \\
+    \textit{#4} & #5 & \textit{ #6} \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingWork}[5]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}} c r}
+    \textbf{#1} & #2 & #3\\
+    \textit{#4} &    & #5 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingWorkSameCompany}[2]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+    \textit{#1} & #2 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingEducation}[5]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} -- #2 & #3 \\
+    \textit{#4}       & #5 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\resumeSubheadingEducationThesis}[6]{
+  \vspace{-1pt}\item
+  \begin{tabular*}{0.99\textwidth}{l@{\extracolsep{\fill}}r}
+    \textbf{#1} & #2 \\
+    \textit{#3} & \textit{ #4} \\
+    \textit{\textbf{Thesis:}} #5 \\
+    \hspace{42pt}#6 \\
+  \end{tabular*}\vspace{-5pt}
+}
+
+\newcommand{\pubItem}[6]{
+  \vspace{-1pt}\item
+  #1\\
+  #2\\
+  \textit{\href{#6}{\textbf{#3}}{ -- #4}{, #5}}\\
+}
+
+\newcommand{\pubItemshort}[5]{
+  \vspace{-1pt}\item
+  #1\\
+  #2\\
+  \textit{\href{#5}{\textbf{#3}}{, #4}}\\
+}
+
+\newcommand{\mediaItem}[3]{
+  \item{
+    \href{#3}{\textbf{#1}}{: #2 \vspace{-8pt}}
+  }
+}
+
+\newcommand{\resumeSubItem}[2]{\resumeItem{#1}{#2}\vspace{-4pt}}
+
+\renewcommand{\labelitemii}{$\circ$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{description}[leftmargin=*]}
+    \newcommand{\resumeSubHeadingListEnd}{\end{description}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+    \newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\pubListStart}{\begin{etaremune}[itemsep=2pt]}
+    \newcommand{\pubListEnd}{\end{etaremune}}
