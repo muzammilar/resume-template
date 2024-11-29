@@ -77,11 +77,43 @@
 \input{include/headers.tex}
 
 %-------------------------------------------
-% CV Type - Long Version (Default) or Short Version
-% If - Else Conditions for longer version of resume
-\newif\iflongversion
-\longversiontrue % change it to \longversionfalse for short version, keep it as longversiontrue for long version
-\newcommand{\longVersionInfo}[1]{\iflongversion #1 \fi}
+%%%%%%%%%%%%%%% CV TYPES %%%%%%%%%%%%%%%
+
+% Machine Learning - If - Else Conditions for longer version of resume
+% Use this for ML Speicifc Jobs
+\newif\ifmachinelearning
+\machinelearningtrue % change it to \machinelearningfalse for short version, keep it as machinelearningtrue for long version
+\newcommand{\machineLearningInfo}[1]{\ifmachinelearning #1 \fi}
+
+% Web Developmenet - If - Else Conditions for longer version of resume
+% Use this for ML Speicifc Jobs
+\newif\ifwebdev
+\webdevtrue % change it to \webdevfalse for short version, keep it as webdevtrue for long version
+\newcommand{\webDevInfo}[1]{\ifwebdev #1 \fi}
+
+% CV Type - Version Level - 0 to 10
+% 0 is always included. 0 should be 1-pager always. 10 is max value.
+\newcount\resumelength
+\resumelength=10 % Default: 10. Set an initial value for the variable, change it to other numbers (from 0 to 10), to change resume length.
+% Check if a value was passed from the command line - pdflatex "\newcount\passedresumelength \passedresumelength=42 \input{main.tex}"
+\makeatletter  % needed for the @ifdefined
+\@ifundefined{passedresumelength}{
+    % Do nothing; use default
+}{
+    \resumelength=\passedresumelength % Override with the passed value
+}
+\makeatother % needed for the @ifdefined
+% I couldn't get greater than equals to work cos I don't know latex
+\newcommand{\resumeLengthLevelOne}[1]{\ifnum\resumelength>0 #1 \fi}
+\newcommand{\resumeLengthLevelTwo}[1]{\ifnum\resumelength>1 #1 \fi}
+\newcommand{\resumeLengthLevelThree}[1]{\ifnum\resumelength>2 #1 \fi}
+\newcommand{\resumeLengthLevelFour}[1]{\ifnum\resumelength>3 #1 \fi}
+\newcommand{\resumeLengthLevelFive}[1]{\ifnum\resumelength>4 #1 \fi}
+\newcommand{\resumeLengthLevelSix}[1]{\ifnum\resumelength>5 #1 \fi}
+\newcommand{\resumeLengthLevelSeven}[1]{\ifnum\resumelength>6 #1 \fi}
+\newcommand{\resumeLengthLevelEight}[1]{\ifnum\resumelength>7 #1 \fi}
+\newcommand{\resumeLengthLevelNine}[1]{\ifnum\resumelength>8 #1 \fi}
+\newcommand{\resumeLengthLevelTen}[1]{\ifnum\resumelength>9 #1 \fi}
 
 %-------------------------------------------
 %%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -103,15 +135,15 @@
 
 \subfile{sections/projects.tex} \vspace{-1em}
 
-\longVersionInfo{
+\resumeLengthLevelTen{
   \subfile{sections/awards.tex} \vspace{-1em}
 }
 
-\longVersionInfo{
+\resumeLengthLevelTen{
   \subfile{sections/coursework.tex} \vspace{-1em}
 }
 
-\longVersionInfo{
+\resumeLengthLevelTen{
   \subfile{sections/publications.tex} \vspace{-1em}
 }
 
