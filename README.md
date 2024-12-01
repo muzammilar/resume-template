@@ -5,8 +5,7 @@
 
 ```sh
 # Tex Package Manager: MiKTex
-#  Note: This must be run on the Ubuntu WSL Image/App
-# For linux users, please remove the `.exe` from the package
+#  Note: This must be run on Linux or the Ubuntu WSL Image/App. This will not work on windows directly.
 # cd /mnt/c/path/to/repo
 # make all
 ```
